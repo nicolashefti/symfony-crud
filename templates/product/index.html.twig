@@ -2,19 +2,41 @@
 
 {% block title %}Hello {% endblock %}
 
+{% block stylesheets %}
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+{% endblock %}
 {% block body %}
 
     <h1 class="title">Available products</h1>
 
     {% for product in products %}
-        <article class="message">
-            <div class="message-header">
-                <p><a href="/product/{{ product.getId() }}">{{ product.getName() }}</a></p>
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    <a href="/product/{{ product.getId() }}">{{ product.getName() }}</a>
+                </p>
+
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    {{ product.getDescription() }}
+                    <br><br>
+                    Added at:
+                    <time>{{ product.getCreationDate()|date("m/d/Y H:i:s") }}</time>
+                </div>
             </div>
-            <div class="message-body">
-                {{ product.getDescription() }}
-            </div>
-        </article>
+            <footer class="card-footer">
+                <p class="card-footer-item">Price before tax:&nbsp;<strong>{{ product.getPrice() }}</strong>&euro;</p>
+                <p class="card-footer-item">Price, rate 1:&nbsp;<strong>{{ product.getTotalPriceRate1() }}</strong>&euro;
+                </p>
+                <p class="card-footer-item">Price, rate 2:&nbsp;<strong>{{ product.getTotalPriceRate2() }}</strong>&euro;
+                </p>
+            </footer>
+        </div>
     {% endfor %}
 
 {% endblock %}

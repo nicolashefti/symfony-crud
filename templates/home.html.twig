@@ -1,5 +1,17 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Product Manager{% endblock %}
+
 {% block body %}
-    <h1 class="title">Welcome to product manager {{ number }}</h1>
+    <div class="content">
+        <h1>Welcome to product manager {{ number }}</h1>
+        <p>I am the "Hello World" page, displaying a random number. Still better than displaying only 42...</p>
+        <h2>Stack</h2>
+        <p>I am built on:</p>
+        <ul>
+            <li>Symfony 4</li>
+            <li><a href="https://bulma.io/">Bulma</a></li>
+        </ul>
+        <p>I run into a custom Docker image based on php7.2-apache.</p>
+    </div>
 {% endblock %}
