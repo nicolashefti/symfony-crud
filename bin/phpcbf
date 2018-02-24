@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker exec symfonycrud_website_1 /bin/bash -c \
+    './vendor/bin/phpcbf --standard=./phpcs.xml ./src'

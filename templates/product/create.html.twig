@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block body %}
+    <h1 class="title">Add a new Product</h1>
+    <form method="post">
+        <div class="field">
+            <label for="title">Title</label>
+            <div class="control">
+                <input name="title" id="title" type="text" placeholder="Product name"/>
+            </div>
+        </div>
+        <div class="field">
+            <label for="price">Description</label>
+            <div class="control">
+                <input name="description" id="description" type="string" maxlength="250"/>
+            </div>
+        </div>
+        <div class="field">
+            <label for="price">Price (without VAT)</label>
+            <div class="control">
+                <input name="price" id="price" type="number" placeholder="Price"/>
+            </div>
+        </div>
+        <div class="field is-grouped">
+            <div class="control">
+                <input class="button is-link" type="submit"/>
+            </div>
+            <div class="control">
+                <a class="button is-text" href="/product">Cancel</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

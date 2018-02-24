@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block body %}
+
+    <h1 class="title">Available products</h1>
+
+    {% for product in products %}
+        <article class="message">
+            <div class="message-header">
+                <p><a href="/product/{{ product.getId() }}">{{ product.getName() }}</a></p>
+            </div>
+            <div class="message-body">
+                {{ product.getDescription() }}
+            </div>
+        </article>
+    {% endfor %}
+
+{% endblock %}

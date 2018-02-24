@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% set pageTitle = 'Product: ' ~  product.getName() %}
+{% block title %}{{ pageTitle }}{% endblock %}
+
+{% block body %}
+
+    <h1 class="title">{{ pageTitle }}</h1>
+
+    <div class="message-body">
+        {{ product.getDescription() }}
+    </div>
+
+{% endblock %}

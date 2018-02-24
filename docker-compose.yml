@@ -1,19 +1,10 @@
 version: "3"
 
 services:
-  database:
-    image: mysql:5.5.57
-    ports:
-      - "3307:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-
-  portail:
-    image: php:7.2-apache
+  website:
+    image: nicolashefti/symfony-crud
     ports:
       - "1006:80"
-    depends_on:
-      - database
     volumes:
       - .:/var/www/html
-      - ./config/apache/vhost.conf:/etc/apache2/vhosts/site-enabled/vhost.conf
+      - ./config/apache/vhost.conf:/etc/apache2/sites-enabled/000-default.conf
