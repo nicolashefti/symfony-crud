@@ -1,6 +1,6 @@
 # Symfony 4 - CRUD
 
-[![Build Status](https://travis-ci.org/nicolashefti/symfony4-crud.svg?branch=master)(https://travis-ci.org/nicolashefti/symfony4-crud)
+[![Build Status](https://travis-ci.org/nicolashefti/symfony4-crud.svg?branch=master)](https://travis-ci.org/nicolashefti/symfony4-crud)
 
 ## Start
 
