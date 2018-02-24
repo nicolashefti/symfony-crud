@@ -11,6 +11,7 @@
   - Jump into the container: ```./bin/bash```
   - Install vendors: ```composer install```
   - Create database: ```php bin/console doctrine:database:create```
+  - Launch migrations: ```php bin/console doctrine:migrations:migrate
 
 ## Start
 
