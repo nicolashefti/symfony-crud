@@ -2,13 +2,23 @@
 
 [![Build Status](https://travis-ci.org/nicolashefti/symfony4-crud.svg?branch=master)](https://travis-ci.org/nicolashefti/symfony4-crud)
 
+## Setup
+
+- Clone the repo
+- Copy .env.dist to .env
+- Install vendors (recommanded inside Docker image)
+  - Start Docker container: ```docker-compose up```
+  - Jump into the container: ```./bin/bash```
+  - Install vendors: ```composer install```
+  - Create database: ```php bin/console doctrine:database:create```
+
 ## Start
 
 ```bash
 docker-compose up
 ```
 
-Website should be accessible under localhost:1006
+The application should be accessible under localhost:1006
 
 ## Dev
 
