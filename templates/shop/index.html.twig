@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+
+    <h1 class="title">Available shops</h1>
+
+    {% for shop in shops %}
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    <a href="/shop/{{ shop.getId() }}">{{ shop.getName() }}</a>
+                </p>
+
+            </header>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
